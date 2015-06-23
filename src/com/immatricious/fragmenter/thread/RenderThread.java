@@ -77,6 +77,9 @@ public class RenderThread extends Thread {
 	{
 		Camera camera = renderer.getCamera();
 		
+		if(camera == null)
+			return;
+		
 		List<Shader> globalShaders = renderer.getGlobalShaders();
 		List<Scene> scenes = renderer.getScenes();
 		
@@ -112,10 +115,10 @@ public class RenderThread extends Thread {
 
 		initSettings();
 		
-		renderer.setCamera(new Camera(width,height,fovAngle,near,far));
+		/*renderer.setCamera(new Camera(width,height,fovAngle,near,far));
 		
 		Shader s = new Shader("test");
-		renderer.addShader(s);
+		renderer.addShader(s);*/
 	}
 	
 	public void initDisplay(int width, int height) throws LWJGLException

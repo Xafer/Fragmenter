@@ -77,10 +77,10 @@ public class Renderer {
 		return null;
 	}
 	
-	public void setCamera(Camera camera, int index) { this.cameras.set(index, camera); }
 	public void setCamera(Camera camera)
 	{
-		this.cameras.add(camera);
+		if(!cameras.contains(camera))
+			this.cameras.add(camera);
 		this.mainCameraIndex = this.cameras.indexOf(camera);
 		
 		camera.trigger();

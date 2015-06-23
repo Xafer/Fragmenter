@@ -29,8 +29,7 @@ public abstract class Camera extends Entity{
 	}
 	
 	public void update(Time time)
-	{
-		
+	{	
 	}
 	
 	public void set(int width, int height, double fovAngle, double near, double far)
